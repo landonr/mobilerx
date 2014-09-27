@@ -1,25 +1,110 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="mobilerx" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="view" contentMode="TopLeft" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="7E2-KD-Ycx">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bluecover.png" translatesAutoresizingMaskIntoConstraints="NO" id="L89-oa-4OW">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="tCg-oe-74J">
+                                <rect key="frame" x="41" y="289" width="293" height="110"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="welcomeTo.png" translatesAutoresizingMaskIntoConstraints="NO" id="LbJ-vy-YDH">
+                                <rect key="frame" x="88" y="239" width="199" height="33"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="X0z-qd-7in">
+                                <rect key="frame" x="127" y="25" width="120" height="45"/>
+                            </imageView>
+                            <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j00-V7-k0B">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="getStarted.png" translatesAutoresizingMaskIntoConstraints="NO" id="TcU-I5-3sh">
+                                        <rect key="frame" x="41" y="110" width="293" height="103"/>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Kv-qg-UdR">
+                                        <rect key="frame" x="37" y="230" width="300" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JSj-ZC-S11">
+                                        <rect key="frame" x="37" y="263" width="300" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qrd-kX-SGX">
+                                        <rect key="frame" x="37" y="296" width="300" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Health Card Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sxr-aQ-M7j">
+                                        <rect key="frame" x="37" y="329" width="300" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <action selector="healthValueChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="ibo-Dq-jBu"/>
+                                        </connections>
+                                    </textField>
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ready.png" translatesAutoresizingMaskIntoConstraints="NO" id="p0t-O2-16U">
+                                        <rect key="frame" x="269" y="367" width="68" height="32"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="6n3-JO-5Zx" appends="YES" id="x9o-6e-Nv3"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="TapGestureOutlet" destination="6n3-JO-5Zx" id="mNs-qQ-GZD"/>
+                        <outlet property="addressField" destination="qrd-kX-SGX" id="5AJ-Nj-tOg"/>
+                        <outlet property="backgroundView" destination="7E2-KD-Ycx" id="XRo-aA-txf"/>
+                        <outlet property="blueView" destination="L89-oa-4OW" id="rGB-gh-gWZ"/>
+                        <outlet property="firstNameField" destination="4Kv-qg-UdR" id="ImO-eo-Gvj"/>
+                        <outlet property="getStartedView" destination="j00-V7-k0B" id="ZN2-qp-Jge"/>
+                        <outlet property="healthCardField" destination="Sxr-aQ-M7j" id="V1D-Gy-6u1"/>
+                        <outlet property="lastNameField" destination="JSj-ZC-S11" id="bb8-Kt-8Rm"/>
+                        <outlet property="logoView" destination="tCg-oe-74J" id="AT8-C1-Txx"/>
+                        <outlet property="logoViewTwo" destination="X0z-qd-7in" id="XHe-gO-NVg"/>
+                        <outlet property="readyButton" destination="p0t-O2-16U" id="tsG-oi-i1Y"/>
+                        <outlet property="welcomeView" destination="LbJ-vy-YDH" id="KlX-in-dNd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="6n3-JO-5Zx">
+                    <connections>
+                        <action selector="readyTapped:" destination="BYZ-38-t0r" id="1uZ-eY-ua9"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="239.5" y="102.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background.png" width="2555" height="1704"/>
+        <image name="bluecover.png" width="960" height="1704"/>
+        <image name="getStarted.png" width="748" height="258"/>
+        <image name="logo.png" width="480" height="181"/>
+        <image name="ready.png" width="323" height="142"/>
+        <image name="welcomeTo.png" width="673" height="112"/>
+    </resources>
 </document>
