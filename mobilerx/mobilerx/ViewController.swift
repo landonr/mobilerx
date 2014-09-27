@@ -55,7 +55,7 @@ class ViewController: UIViewController {
             didAppear=true
             UIView.animateWithDuration(1.0, animations: {
                 self.logoView.frame.origin = CGPoint(x: 127, y: 25)
-                self.logoView.frame.size = CGSize(width: 120, height: 45)
+                self.logoView.frame.size = CGSize(width: 121, height: 30)
                 self.blueView.alpha = 0.8
                 self.welcomeView.alpha = 0
             });
@@ -63,7 +63,7 @@ class ViewController: UIViewController {
         }
         else {
             self.logoView.frame.origin = CGPoint(x: 127, y: 25)
-            self.logoView.frame.size = CGSize(width: 120, height: 45)
+            self.logoView.frame.size = CGSize(width: 121, height: 30)
         }
     }
     
@@ -96,13 +96,14 @@ class ViewController: UIViewController {
     
     @IBOutlet var TapGestureOutlet: UITapGestureRecognizer!
     @IBAction func readyTapped(sender: AnyObject) {
-        
+        self.performSegueWithIdentifier("showCamera", sender: self)
     }
+    
     @IBAction func healthValueChanged(sender: AnyObject) {
         var numberCount = countElements(self.healthCardField.text)
         if numberCount == 9{
             self.readyButton.userInteractionEnabled = true
-            UIView.animateWithDuration(0.5, animations: {
+            UIView.animateWithDuration(0.25, animations: {
                 self.readyButton.alpha = 1
             });
         }

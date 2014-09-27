@@ -23,13 +23,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="tCg-oe-74J">
-                                <rect key="frame" x="41" y="289" width="293" height="110"/>
+                                <rect key="frame" x="18" y="280" width="339" height="84"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="welcomeTo.png" translatesAutoresizingMaskIntoConstraints="NO" id="LbJ-vy-YDH">
                                 <rect key="frame" x="88" y="239" width="199" height="33"/>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="X0z-qd-7in">
-                                <rect key="frame" x="127" y="25" width="120" height="45"/>
+                                <rect key="frame" x="127" y="25" width="121" height="30"/>
                             </imageView>
                             <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j00-V7-k0B">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -87,6 +87,7 @@
                         <outlet property="logoViewTwo" destination="X0z-qd-7in" id="XHe-gO-NVg"/>
                         <outlet property="readyButton" destination="p0t-O2-16U" id="tsG-oi-i1Y"/>
                         <outlet property="welcomeView" destination="LbJ-vy-YDH" id="KlX-in-dNd"/>
+                        <segue destination="sxx-Jh-FQv" kind="show" identifier="showCamera" id="kal-vh-yd4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -98,12 +99,70 @@
             </objects>
             <point key="canvasLocation" x="239.5" y="102.5"/>
         </scene>
+        <!--Camera Controller-->
+        <scene sceneID="lrW-yd-VVh">
+            <objects>
+                <viewController id="sxx-Jh-FQv" customClass="CameraController" customModule="mobilerx" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nmJ-pE-W5v"/>
+                        <viewControllerLayoutGuide type="bottom" id="UbU-H7-iaV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="smG-FD-rwE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="TopLeft" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Nn-6C-EZg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="xHW-2j-kM4">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="667"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bluecover.png" translatesAutoresizingMaskIntoConstraints="NO" id="pMy-Et-dXK">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="RG0-wo-3mq">
+                                        <rect key="frame" x="127" y="25" width="121" height="30"/>
+                                    </imageView>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cameraIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="YKx-53-d1n">
+                                        <rect key="frame" x="133" y="530" width="108" height="108"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="aWB-pW-oTP" appends="YES" id="CP6-db-lNA"/>
+                                        </connections>
+                                    </imageView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="zfN-Dq-9Tr">
+                                        <rect key="frame" x="30" y="83" width="314" height="424"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="cameraButton" destination="YKx-53-d1n" id="VxC-PF-0W6"/>
+                        <outlet property="cameraTapRecognizer" destination="aWB-pW-oTP" id="qDp-2D-8mY"/>
+                        <outlet property="tableView" destination="zfN-Dq-9Tr" id="BOg-6P-v1O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pIN-Et-e4E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="aWB-pW-oTP">
+                    <connections>
+                        <action selector="cameraButtonTouched:" destination="sxx-Jh-FQv" id="b8z-DC-mru"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="784.5" y="102.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="background.png" width="2555" height="1704"/>
         <image name="bluecover.png" width="960" height="1704"/>
+        <image name="cameraIcon.png" width="216" height="216"/>
         <image name="getStarted.png" width="748" height="258"/>
-        <image name="logo.png" width="480" height="181"/>
+        <image name="logo.png" width="678" height="167"/>
         <image name="ready.png" width="323" height="142"/>
         <image name="welcomeTo.png" width="673" height="112"/>
     </resources>
