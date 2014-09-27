@@ -9,15 +9,18 @@
 /* Begin PBXBuildFile section */
 		1C674830B33748A283C237D5 /* libPods-mobilerx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DECC8CE12C8490D82265DAE /* libPods-mobilerx.a */; };
 		290A5059A6B548069928B4E9 /* libPods-mobilerxTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7AA85E019748528490DA85 /* libPods-mobilerxTests.a */; };
+		8F4AEE1219D732E8009BB317 /* welcomeTo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F4AEE1119D732E8009BB317 /* welcomeTo.png */; };
+		8F4AEE1419D7366A009BB317 /* getStarted.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F4AEE1319D7366A009BB317 /* getStarted.png */; };
+		8F4AEE1619D74238009BB317 /* ready.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F4AEE1519D74238009BB317 /* ready.png */; };
 		8F9719AA19D72287005ACDFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9719A919D72287005ACDFE /* AppDelegate.swift */; };
 		8F9719AC19D72287005ACDFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9719AB19D72287005ACDFE /* ViewController.swift */; };
 		8F9719AF19D72287005ACDFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F9719AD19D72287005ACDFE /* Main.storyboard */; };
 		8F9719B119D72287005ACDFE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F9719B019D72287005ACDFE /* Images.xcassets */; };
-		8F9719B419D72287005ACDFE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F9719B219D72287005ACDFE /* LaunchScreen.xib */; };
 		8F9719C019D72287005ACDFE /* mobilerxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9719BF19D72287005ACDFE /* mobilerxTests.swift */; };
-		C2FCB18419D72C2D003E749A /* Objects.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FCB18319D72C2D003E749A /* Objects.swift */; };
-		C2FCB18C19D7459D003E749A /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FCB18B19D7459D003E749A /* ApiManager.swift */; };
-		C2FCB18E19D76056003E749A /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FCB18D19D76056003E749A /* HTTP.swift */; };
+		8F9CFCC119D72A7F000E7F1B /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F9CFCBF19D72A7F000E7F1B /* background.png */; };
+		8F9CFCC419D72C2C000E7F1B /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F9CFCC319D72C2C000E7F1B /* logo.png */; };
+		8F9CFCC619D72C6D000E7F1B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F9CFCC519D72C6D000E7F1B /* LaunchScreen.xib */; };
+		8F9CFCC819D72DD7000E7F1B /* bluecover.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F9CFCC719D72DD7000E7F1B /* bluecover.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,22 +36,25 @@
 /* Begin PBXFileReference section */
 		2A7AA85E019748528490DA85 /* libPods-mobilerxTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mobilerxTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DECC8CE12C8490D82265DAE /* libPods-mobilerx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mobilerx.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F4AEE1119D732E8009BB317 /* welcomeTo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcomeTo.png; sourceTree = "<group>"; };
+		8F4AEE1319D7366A009BB317 /* getStarted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getStarted.png; sourceTree = "<group>"; };
+		8F4AEE1519D74238009BB317 /* ready.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ready.png; sourceTree = "<group>"; };
 		8F9719A419D72287005ACDFE /* mobilerx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mobilerx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F9719A819D72287005ACDFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F9719A919D72287005ACDFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F9719AB19D72287005ACDFE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8F9719AE19D72287005ACDFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8F9719B019D72287005ACDFE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		8F9719B319D72287005ACDFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8F9719B919D72287005ACDFE /* mobilerxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mobilerxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F9719BE19D72287005ACDFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F9719BF19D72287005ACDFE /* mobilerxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mobilerxTests.swift; sourceTree = "<group>"; };
 		8F9719CA19D72316005ACDFE /* mobilerx-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mobilerx-Bridging-Header.h"; sourceTree = "<group>"; };
+		8F9CFCBF19D72A7F000E7F1B /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		8F9CFCC319D72C2C000E7F1B /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		8F9CFCC519D72C6D000E7F1B /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		8F9CFCC719D72DD7000E7F1B /* bluecover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bluecover.png; sourceTree = "<group>"; };
 		A959CBF2AA7E43D1B259ED5D /* Pods-mobilerxTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mobilerxTests.xcconfig"; path = "Pods/Pods-mobilerxTests.xcconfig"; sourceTree = "<group>"; };
 		AA8D087D555A4E278E18FA56 /* Pods-mobilerx.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mobilerx.xcconfig"; path = "Pods/Pods-mobilerx.xcconfig"; sourceTree = "<group>"; };
-		C2FCB18319D72C2D003E749A /* Objects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Objects.swift; sourceTree = "<group>"; };
-		C2FCB18B19D7459D003E749A /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
-		C2FCB18D19D76056003E749A /* HTTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,16 +101,14 @@
 		8F9719A619D72287005ACDFE /* mobilerx */ = {
 			isa = PBXGroup;
 			children = (
-				C2FCB18319D72C2D003E749A /* Objects.swift */,
 				8F9719A919D72287005ACDFE /* AppDelegate.swift */,
 				8F9719AB19D72287005ACDFE /* ViewController.swift */,
 				8F9719AD19D72287005ACDFE /* Main.storyboard */,
+				8F9CFCC519D72C6D000E7F1B /* LaunchScreen.xib */,
 				8F9719B019D72287005ACDFE /* Images.xcassets */,
-				8F9719B219D72287005ACDFE /* LaunchScreen.xib */,
+				8F9CFCBE19D72A7F000E7F1B /* UI */,
 				8F9719A719D72287005ACDFE /* Supporting Files */,
 				8F9719CA19D72316005ACDFE /* mobilerx-Bridging-Header.h */,
-				C2FCB18B19D7459D003E749A /* ApiManager.swift */,
-				C2FCB18D19D76056003E749A /* HTTP.swift */,
 			);
 			path = mobilerx;
 			sourceTree = "<group>";
@@ -132,6 +136,19 @@
 				8F9719BE19D72287005ACDFE /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8F9CFCBE19D72A7F000E7F1B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				8F4AEE1519D74238009BB317 /* ready.png */,
+				8F4AEE1319D7366A009BB317 /* getStarted.png */,
+				8F9CFCC719D72DD7000E7F1B /* bluecover.png */,
+				8F9CFCC319D72C2C000E7F1B /* logo.png */,
+				8F9CFCBF19D72A7F000E7F1B /* background.png */,
+				8F4AEE1119D732E8009BB317 /* welcomeTo.png */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		E60DF96C1BE04DBBA54FF1EF /* Frameworks */ = {
@@ -196,6 +213,7 @@
 				TargetAttributes = {
 					8F9719A319D72287005ACDFE = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = 6FSF2DC5JT;
 					};
 					8F9719B819D72287005ACDFE = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -227,8 +245,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F4AEE1419D7366A009BB317 /* getStarted.png in Resources */,
+				8F4AEE1619D74238009BB317 /* ready.png in Resources */,
+				8F9CFCC619D72C6D000E7F1B /* LaunchScreen.xib in Resources */,
+				8F9CFCC819D72DD7000E7F1B /* bluecover.png in Resources */,
+				8F4AEE1219D732E8009BB317 /* welcomeTo.png in Resources */,
+				8F9CFCC419D72C2C000E7F1B /* logo.png in Resources */,
 				8F9719AF19D72287005ACDFE /* Main.storyboard in Resources */,
-				8F9719B419D72287005ACDFE /* LaunchScreen.xib in Resources */,
+				8F9CFCC119D72A7F000E7F1B /* background.png in Resources */,
 				8F9719B119D72287005ACDFE /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,10 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2FCB18E19D76056003E749A /* HTTP.swift in Sources */,
-				C2FCB18C19D7459D003E749A /* ApiManager.swift in Sources */,
 				8F9719AC19D72287005ACDFE /* ViewController.swift in Sources */,
-				C2FCB18419D72C2D003E749A /* Objects.swift in Sources */,
 				8F9719AA19D72287005ACDFE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,14 +364,6 @@
 				8F9719AE19D72287005ACDFE /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8F9719B219D72287005ACDFE /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8F9719B319D72287005ACDFE /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -441,9 +454,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = mobilerx/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "mobilerx/mobilerx-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -455,9 +471,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = mobilerx/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "mobilerx/mobilerx-Bridging-Header.h";
 			};
 			name = Release;
