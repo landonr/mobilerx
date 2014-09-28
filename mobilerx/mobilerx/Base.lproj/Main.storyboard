@@ -16,6 +16,13 @@
             <string>MissionGothic-Thin</string>
             <string>MissionGothic-Thin</string>
             <string>MissionGothic-Thin</string>
+            <string>MissionGothic-Thin</string>
+            <string>MissionGothic-Thin</string>
+            <string>MissionGothic-Thin</string>
+            <string>MissionGothic-Thin</string>
+            <string>MissionGothic-Thin</string>
+            <string>MissionGothic-Thin</string>
+            <string>MissionGothic-Thin</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -49,9 +56,6 @@
                             <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j00-V7-k0B">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="getStarted.png" translatesAutoresizingMaskIntoConstraints="NO" id="TcU-I5-3sh">
-                                        <rect key="frame" x="41" y="110" width="293" height="103"/>
-                                    </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Kv-qg-UdR">
                                         <rect key="frame" x="37" y="230" width="300" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -91,6 +95,18 @@
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="whU-13-r6G" appends="YES" id="orH-LL-9mF"/>
                                         </connections>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please enter your information below." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4k-fc-FJn">
+                                        <rect key="frame" x="41" y="139" width="302" height="83"/>
+                                        <fontDescription key="fontDescription" name="MissionGothic-Thin" family="Mission Gothic" pointSize="29"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Let's get started." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Btn-UG-8RJ">
+                                        <rect key="frame" x="37" y="95" width="302" height="54"/>
+                                        <fontDescription key="fontDescription" name="MissionGothic-Thin" family="Mission Gothic" pointSize="45"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -163,13 +179,36 @@
                                         </connections>
                                     </imageView>
                                     <view alpha="0.10000000000000001" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W9I-JI-SZ6">
-                                        <rect key="frame" x="30" y="83" width="314" height="424"/>
+                                        <rect key="frame" x="33" y="106" width="314" height="356"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="65" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="zfN-Dq-9Tr">
-                                        <rect key="frame" x="15" y="83" width="329" height="424"/>
+                                        <rect key="frame" x="18" y="106" width="329" height="356"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="rcU-BR-CbC">
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rcU-BR-CbC" id="iHV-Fo-83t">
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <segue destination="v0q-nk-WrL" kind="presentation" identifier="trackPers" id="hXB-Or-8ef"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
                                     </tableView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recent Prescriptions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4a-Y1-mDo">
+                                        <rect key="frame" x="18" y="63" width="314" height="35"/>
+                                        <fontDescription key="fontDescription" name="MissionGothic-Thin" family="Mission Gothic" pointSize="32"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Photograph New Prescription" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqS-Oq-SJd">
+                                        <rect key="frame" x="53" y="487" width="294" height="35"/>
+                                        <fontDescription key="fontDescription" name="MissionGothic-Thin" family="Mission Gothic" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
@@ -359,8 +398,8 @@
                                             <outletCollection property="gestureRecognizers" destination="o90-AR-xYd" appends="YES" id="AHq-Xo-ScF"/>
                                         </connections>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="When will you be picking it up?" lineBreakMode="middleTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o4z-4z-jNq">
-                                        <rect key="frame" x="47" y="247" width="280" height="84"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="When do you need it?" lineBreakMode="middleTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o4z-4z-jNq">
+                                        <rect key="frame" x="47" y="289" width="280" height="42"/>
                                         <fontDescription key="fontDescription" name="MissionGothic-Thin" family="Mission Gothic" pointSize="29"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -533,13 +572,81 @@
             </objects>
             <point key="canvasLocation" x="1886.5" y="102.5"/>
         </scene>
+        <!--Track Controller-->
+        <scene sceneID="03i-Yl-dRZ">
+            <objects>
+                <viewController id="v0q-nk-WrL" customClass="TrackController" customModule="mobilerx" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0Ks-GK-gt0"/>
+                        <viewControllerLayoutGuide type="bottom" id="9tY-EP-V4m"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GLG-cC-j7q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="TopLeft" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jkh-E9-Dq9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="rZi-gY-awu">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="667"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bluecover.png" translatesAutoresizingMaskIntoConstraints="NO" id="tmW-q8-tI2">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="iFz-pk-BXp">
+                                        <rect key="frame" x="127" y="25" width="121" height="30"/>
+                                    </imageView>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pn9-d0-xLp">
+                                        <rect key="frame" x="30" y="175" width="314" height="371"/>
+                                    </mapView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxS-4z-Eyy">
+                                        <rect key="frame" x="8" y="8" width="88" height="63"/>
+                                        <fontDescription key="fontDescription" name="MissionGothic-Thin" family="Mission Gothic" pointSize="28"/>
+                                        <state key="normal" title="Back">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="sxx-Jh-FQv" kind="presentation" identifier="backFromTrack" id="amN-yL-Jpd"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="60 x 25mg Oxyocodone" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btR-a5-Y1P">
+                                        <rect key="frame" x="31" y="93" width="313" height="31"/>
+                                        <fontDescription key="fontDescription" name="MissionGothic-Thin" family="Mission Gothic" pointSize="27"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ON ROUTE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8L-h5-1Fm">
+                                        <rect key="frame" x="31" y="124" width="313" height="36"/>
+                                        <fontDescription key="fontDescription" name="MissionGothic-Thin" family="Mission Gothic" pointSize="27"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="cameraTapRecognizer" destination="aWB-pW-oTP" id="EW1-VB-eFw"/>
+                        <outlet property="map" destination="pn9-d0-xLp" id="kpJ-Gj-lu8"/>
+                        <outlet property="nameLabel" destination="btR-a5-Y1P" id="dYg-os-Skb"/>
+                        <outlet property="statusLabel" destination="O8L-h5-1Fm" id="5el-EK-dwj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MJE-28-RW8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="867.5" y="-679.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="background.png" width="2555" height="1704"/>
         <image name="bluecover.png" width="960" height="1704"/>
         <image name="cameraIcon.png" width="216" height="216"/>
         <image name="close.png" width="128" height="128"/>
-        <image name="getStarted.png" width="748" height="258"/>
         <image name="logo.png" width="678" height="167"/>
         <image name="nocheck.png" width="128" height="128"/>
         <image name="ready.png" width="323" height="142"/>
@@ -547,6 +654,6 @@
         <image name="welcomeTo.png" width="673" height="112"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2gy-SR-6Bh"/>
+        <segue reference="amN-yL-Jpd"/>
     </inferredMetricsTieBreakers>
 </document>

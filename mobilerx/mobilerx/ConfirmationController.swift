@@ -36,7 +36,22 @@ class ConfirmationController: UIViewController
     @IBAction func submitTapped(sender: AnyObject) {
         var imageData : NSData = UIImageJPEGRepresentation(prescriptionImage, 0.6)
         var i: String = imageData.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.allZeros)
-        var work = createWorkOrder(patientId, "123", i, pharmaName)
+        
+        var priority = ""
+        switch state {
+            case 1:
+                priority = "Immediately"
+        case 2:
+            priority = "Today"
+        case 3:
+            priority = "Delivery"
+        case 4:
+            priority = "This Week"
+            default:
+                priority = "Undefined"
+        }
+        
+        var work = createWorkOrder(patientId, "123", i, pharmaName, priority)
         
         var ind = UIActivityIndicatorView(frame: CGRectMake(0,0, 50, 50)) as UIActivityIndicatorView
         
@@ -55,6 +70,14 @@ class ConfirmationController: UIViewController
             self.networkLayer.hidden = true
             self.performSegueWithIdentifier("showHome", sender: self)
         })
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showHome"
+        {
+            let cameraControl:CameraController = segue.destinationViewController as CameraController
+            cameraControl.showPrescriptionAdded()
+        }
     }
     
     @IBAction func immediatelyTapped2(sender: AnyObject) {

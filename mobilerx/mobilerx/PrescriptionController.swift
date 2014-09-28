@@ -75,4 +75,5 @@ class PrescriptionController: UIViewController, UITableViewDelegate, UITableView
             //confirmationControl.pharmaId =
         }
     }
+
 }

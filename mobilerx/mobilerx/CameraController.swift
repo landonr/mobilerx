@@ -19,9 +19,10 @@ class CameraController: UIViewController, UIImagePickerControllerDelegate, UINav
     
     @IBOutlet var tableView: UITableView!
     
-    var pharmacists: NSMutableArray = []
+    var rxs: NSMutableArray = []
     var myImage: UIImage!
-    
+    var status :String!
+    var nameFull : String!
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
@@ -47,11 +48,11 @@ class CameraController: UIViewController, UIImagePickerControllerDelegate, UINav
     
     func loadDataFromFirebase()
     {
-        var listRef = Firebase(url: "https://amber-inferno-3172.firebaseio.com/work_order")
+        var listRef = Firebase(url: "https://amber-inferno-3172.firebaseio.com/rx")
         listRef.observeEventType(.Value, withBlock: { snapshot in
             for id in snapshot.children.allObjects
             {
-                self.pharmacists.addObject(id)
+                self.rxs.addObject(id)
             }
             self.tableView.reloadData()
         });
@@ -77,17 +78,23 @@ class CameraController: UIViewController, UIImagePickerControllerDelegate, UINav
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return self.pharmacists.count
+        return self.rxs.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Default")
-        var pharmacy = self.pharmacists[indexPath.row].childSnapshotForPath("pharmacy").value as String
-        var date = self.pharmacists[indexPath.row].childSnapshotForPath("date").value as String
-        var detail = String(format: "%@, %@km", date, date)
-        cell.textLabel!.text = pharmacy
+        
+        var number = self.rxs[indexPath.row].childSnapshotForPath("drug").childSnapshotForPath("number").value as String
+        
+        var mass = self.rxs[indexPath.row].childSnapshotForPath("drug").childSnapshotForPath("mass").value as String
+        
+        var name = self.rxs[indexPath.row].childSnapshotForPath("drug").childSnapshotForPath("name").value as String
+        
+        status = self.rxs[indexPath.row].childSnapshotForPath("status").value as String
+
+        cell.textLabel!.text = "\(number) x \(mass)mg \(name)"
         cell.textLabel!.font = UIFont(name: "Helvetica", size: 24)
-        cell.detailTextLabel!.text = detail
+        cell.detailTextLabel!.text = status
         cell.detailTextLabel!.textColor = UIColor.whiteColor()
         cell.textLabel!.textColor = UIColor.whiteColor()
         cell.backgroundColor = UIColor.clearColor()
@@ -96,11 +103,38 @@ class CameraController: UIViewController, UIImagePickerControllerDelegate, UINav
         return cell
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell:UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Default")
+        
+        var number = self.rxs[indexPath.row].childSnapshotForPath("drug").childSnapshotForPath("number").value as String
+        
+        var mass = self.rxs[indexPath.row].childSnapshotForPath("drug").childSnapshotForPath("mass").value as String
+        
+        var name = self.rxs[indexPath.row].childSnapshotForPath("drug").childSnapshotForPath("name").value as String
+        
+        status = self.rxs[indexPath.row].childSnapshotForPath("status").value as String
+        nameFull = "\(number) x \(mass)mg \(name)"
+        self.performSegueWithIdentifier("trackPers", sender: self)
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showPrescription"
         {
             let prescriptionControl:PrescriptionController = segue.destinationViewController as PrescriptionController
             prescriptionControl.prescriptionImage = myImage
         }
+        else if segue.identifier == "trackPers"
+        {
+            let trackControl : TrackController = segue.destinationViewController as TrackController
+            
+            trackControl.name = nameFull
+            trackControl.status = status
+        }
+    }
+    
+    
+    func showPrescriptionAdded() {
+        var av = UIAlertView(title: "Prescription Submitted", message: "Your prescription was submitted, we'll notify you when it is ready.", delegate: self, cancelButtonTitle: "Ok")
+        av.show()
     }
 }

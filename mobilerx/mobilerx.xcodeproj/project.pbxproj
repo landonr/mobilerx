@@ -37,6 +37,8 @@
 		8FF0603A19D7994A00FFACD9 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF0603819D7994A00FFACD9 /* check.png */; };
 		8FF0603B19D7994A00FFACD9 /* nocheck.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF0603919D7994A00FFACD9 /* nocheck.png */; };
 		8FF0603D19D79B1800FFACD9 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF0603C19D79B1800FFACD9 /* close.png */; };
+		C226441519D86D7E00CF748A /* TrackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C226441419D86D7E00CF748A /* TrackController.swift */; };
+		C226441719D8708600CF748A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C226441619D8708600CF748A /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		8FF0603C19D79B1800FFACD9 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
 		A959CBF2AA7E43D1B259ED5D /* Pods-mobilerxTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mobilerxTests.xcconfig"; path = "Pods/Pods-mobilerxTests.xcconfig"; sourceTree = "<group>"; };
 		AA8D087D555A4E278E18FA56 /* Pods-mobilerx.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mobilerx.xcconfig"; path = "Pods/Pods-mobilerx.xcconfig"; sourceTree = "<group>"; };
+		C226441419D86D7E00CF748A /* TrackController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackController.swift; sourceTree = "<group>"; };
+		C226441619D8708600CF748A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C226441719D8708600CF748A /* MapKit.framework in Frameworks */,
 				1C674830B33748A283C237D5 /* libPods-mobilerx.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,6 +153,7 @@
 				8F9CFCBE19D72A7F000E7F1B /* UI */,
 				8F9719A719D72287005ACDFE /* Supporting Files */,
 				8F9719CA19D72316005ACDFE /* mobilerx-Bridging-Header.h */,
+				C226441419D86D7E00CF748A /* TrackController.swift */,
 			);
 			path = mobilerx;
 			sourceTree = "<group>";
@@ -202,6 +208,7 @@
 		E60DF96C1BE04DBBA54FF1EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C226441619D8708600CF748A /* MapKit.framework */,
 				8DECC8CE12C8490D82265DAE /* libPods-mobilerx.a */,
 				2A7AA85E019748528490DA85 /* libPods-mobilerxTests.a */,
 			);
@@ -261,11 +268,11 @@
 				TargetAttributes = {
 					8F9719A319D72287005ACDFE = {
 						CreatedOnToolsVersion = 6.0.1;
-						DevelopmentTeam = 6FSF2DC5JT;
+						DevelopmentTeam = Q2NT456PRT;
 					};
 					8F9719B819D72287005ACDFE = {
 						CreatedOnToolsVersion = 6.0.1;
-						DevelopmentTeam = 6FSF2DC5JT;
+						DevelopmentTeam = Q2NT456PRT;
 						TestTargetID = 8F9719A319D72287005ACDFE;
 					};
 				};
@@ -397,6 +404,7 @@
 				8FF0602B19D7761B00FFACD9 /* ApiManager.swift in Sources */,
 				8FAA4CC919D7A5F4004618AE /* SignInController.swift in Sources */,
 				8F4AEE1819D74A5E009BB317 /* CameraController.swift in Sources */,
+				C226441519D86D7E00CF748A /* TrackController.swift in Sources */,
 				8FF0603319D7852500FFACD9 /* ConfirmationController.swift in Sources */,
 				8F9719AC19D72287005ACDFE /* ViewController.swift in Sources */,
 				8FF0602D19D7761B00FFACD9 /* Objects.swift in Sources */,
