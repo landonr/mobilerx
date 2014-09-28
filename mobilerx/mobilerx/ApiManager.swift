@@ -56,13 +56,11 @@ class ApiManager {
 
     }
     
-    func postWorkOrder(work : Dictionary<String, AnyObject>, image : UIImage) {
-        var imageData : NSData = UIImagePNGRepresentation(image)
-        var i: String = imageData.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.allZeros)
+    func postWorkOrder(work : Dictionary<String, AnyObject>, callback : ()->Void) {
         let url = fb + "work_order.json"
         let request = api.createPostRequest(NSURL(string:url), data: work)
         api.makeRequest(request, callback: { (results : Dictionary<String,AnyObject>) -> Void in
-            println(results)
+            callback()
         })
     }
     

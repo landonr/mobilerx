@@ -51,6 +51,7 @@ class PrescriptionController: UIViewController, UITableViewDelegate, UITableView
         listRef.observeEventType(.Value, withBlock: { snapshot in
             for id in snapshot.children.allObjects
             {
+                println(id)
                 self.pharmacists.addObject(id)
             }
             self.tableView.reloadData()
@@ -63,6 +64,7 @@ class PrescriptionController: UIViewController, UITableViewDelegate, UITableView
             let confirmationControl:ConfirmationController = segue.destinationViewController as ConfirmationController
             confirmationControl.setPharmacistLabel(selectedPharmacist)
             confirmationControl.prescriptionImage = prescriptionImage
+            //confirmationControl.pharmaId =
         }
     }
 }

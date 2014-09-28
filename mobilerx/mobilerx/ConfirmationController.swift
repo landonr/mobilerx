@@ -12,6 +12,7 @@ class ConfirmationController: UIViewController
     @IBOutlet var submitOrderLabel: UILabel!
     var prescriptionImage: UIImage!
     var pharmaName: String!
+    var pharmaId : String!
     var checkerPecker = false
     var state = -1
     override func viewDidAppear(animated: Bool) {
@@ -29,7 +30,20 @@ class ConfirmationController: UIViewController
     }
     
     @IBAction func submitTapped(sender: AnyObject) {
+        var imageData : NSData = UIImageJPEGRepresentation(prescriptionImage, 0.6)
+        var i: String = imageData.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.allZeros)
+        var work = createWorkOrder(patientId, "123", i)
         
+        var ind = UIActivityIndicatorView(frame: CGRectMake(0,0, 50, 50)) as UIActivityIndicatorView
+        
+        ind.center = self.view.center
+        ind.hidesWhenStopped = true
+        ind.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.WhiteLarge
+        self.view.addSubview(ind)
+        ind.startAnimating()
+        fb.postWorkOrder(work, { ()->Void in
+            ind.stopAnimating()
+        })
     }
     
     @IBAction func immediatelyTapped2(sender: AnyObject) {

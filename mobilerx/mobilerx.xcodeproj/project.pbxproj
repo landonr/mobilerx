@@ -252,10 +252,11 @@
 				TargetAttributes = {
 					8F9719A319D72287005ACDFE = {
 						CreatedOnToolsVersion = 6.0.1;
-						DevelopmentTeam = 6FSF2DC5JT;
+						DevelopmentTeam = Q2NT456PRT;
 					};
 					8F9719B819D72287005ACDFE = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = Q2NT456PRT;
 						TestTargetID = 8F9719A319D72287005ACDFE;
 					};
 				};
