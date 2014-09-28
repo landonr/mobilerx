@@ -8,7 +8,7 @@
 
 import Foundation
 
-func createPatient(firstName : String, lastName : String, healthCardNumber : Int, emergencyContacts : [Dictionary<String, AnyObject>], allergies : [String], previousMedicalProcedures : [String]) -> Dictionary<String, AnyObject> {
+public func createPatient(firstName : String, lastName : String, healthCardNumber : String) -> Dictionary<String, AnyObject> {
     var d = Dictionary<String, AnyObject>()
     d["firstName"] = firstName
     d["lastName"] = lastName
@@ -20,7 +20,7 @@ func createPatient(firstName : String, lastName : String, healthCardNumber : Int
 }
 
 func createPatient(id : String,
-firstName : String, lastName : String, healthCardNumber : Int, emergencyContacts : [Dictionary<String, AnyObject>], allergies : [String], previousMedicalProcedures : [String]) -> Dictionary<String, AnyObject> {
+firstName : String, lastName : String, healthCardNumber : Int, emergencyContacts : [Dictionary<String, AnyObject>]?, allergies : [String]?, previousMedicalProcedures : [String]?) -> Dictionary<String, AnyObject> {
     var d = Dictionary<String, AnyObject>()
     d["id"] = id
     d["firstName"] = firstName
@@ -69,9 +69,10 @@ func createDrug(name : String, number : Int, mass : Double, packageQuantity : In
     return d
 }
 
-func createWorkOrder(patientId: String, image : String) -> Dictionary<String, AnyObject> {
+func createWorkOrder(patientId: String, pharmId : String, image : String) -> Dictionary<String, AnyObject> {
     var d = Dictionary<String, AnyObject>()
     d["patientId"] = patientId
+    d["pharmId"] = pharmId
     d["image"] = image
     return d
 }

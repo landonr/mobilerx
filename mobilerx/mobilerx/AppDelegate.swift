@@ -8,6 +8,8 @@
 
 import UIKit
 
+var patientId : String = ""
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

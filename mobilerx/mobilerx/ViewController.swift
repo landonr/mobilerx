@@ -96,6 +96,8 @@ class ViewController: UIViewController {
     
     @IBOutlet var TapGestureOutlet: UITapGestureRecognizer!
     @IBAction func readyTapped(sender: AnyObject) {
+        var patient = createPatient(firstNameField.text, lastNameField.text, healthCardField.text)
+        fb.addPatient(patient)
         self.performSegueWithIdentifier("showCamera", sender: self)
     }
     

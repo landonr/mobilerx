@@ -7,6 +7,9 @@
 //
 
 import Foundation
+import UIKit
+
+var fb = ApiManager()
 
 class ApiManager {
     
@@ -32,7 +35,7 @@ class ApiManager {
         let url = fb + "patients.json"
         let request = api.createPostRequest(NSURL(string: url), data: patient)
         api.makeRequest(request, callback: { (result : Dictionary<String, AnyObject>) -> Void in
-            println(result)
+            patientId = result["name"]! as String
         })
     }
     
@@ -53,7 +56,9 @@ class ApiManager {
 
     }
     
-    func postWorkOrder(work : Dictionary<String, AnyObject>) {
+    func postWorkOrder(work : Dictionary<String, AnyObject>, image : UIImage) {
+        var imageData : NSData = UIImagePNGRepresentation(image)
+        var i: String = imageData.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.allZeros)
         let url = fb + "work_order.json"
         let request = api.createPostRequest(NSURL(string:url), data: work)
         api.makeRequest(request, callback: { (results : Dictionary<String,AnyObject>) -> Void in
