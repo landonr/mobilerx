@@ -57,7 +57,7 @@ class ApiManager {
     }
     
     func postWorkOrder(work : Dictionary<String, AnyObject>, callback : ()->Void) {
-        let url = fb + "work_order.json"
+        let url = fb + "work_orders.json"
         let request = api.createPostRequest(NSURL(string:url), data: work)
         api.makeRequest(request, callback: { (results : Dictionary<String,AnyObject>) -> Void in
             callback()
