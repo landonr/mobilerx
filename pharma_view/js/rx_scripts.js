@@ -3,6 +3,10 @@ var rx_ref = myFirebaseRef.child('rx');
 
 
 $(document).ready(function(){
+
+	$("#patient-id").text(GetURLParameter('id'));
+
+	console.log(GetURLParameter('id'));
 	$("#createRx").click(function(){
 		console.log("createRxclicked")
 
@@ -24,9 +28,26 @@ $(document).ready(function(){
  		});
 
 	});
+
+	
+
 	
 });
 
+function GetURLParameter(sParam)
+{
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+
+    for (var i = 0; i < sURLVariables.length; i++)
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam)
+        {
+            return sParameterName[1];
+        }
+    }
+}
 // new Rx table update
 rx_ref.on('value', function(snapshot) {
 	console.log("Rx added to Firebase");
