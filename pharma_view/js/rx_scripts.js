@@ -4,9 +4,13 @@ var rx_ref = myFirebaseRef.child('rx');
 
 $(document).ready(function(){
 
-	$("#patient-id").text(GetURLParameter('id'));
-
 	console.log(GetURLParameter('id'));
+
+	if (typeof GetURLParameter('id') !== "undefined") {
+		// $("#patient-id").text(GetURLParameter('id'));
+		$('#patient-id').val(GetURLParameter('id'));
+	}
+	
 	$("#createRx").click(function(){
 		console.log("createRxclicked")
 
@@ -26,12 +30,7 @@ $(document).ready(function(){
  			},
  			status: "pending"
  		});
-
 	});
-
-	
-
-	
 });
 
 function GetURLParameter(sParam)
@@ -48,6 +47,7 @@ function GetURLParameter(sParam)
         }
     }
 }
+
 // new Rx table update
 rx_ref.on('value', function(snapshot) {
 	console.log("Rx added to Firebase");
@@ -70,22 +70,5 @@ rx_ref.on('value', function(snapshot) {
 	    $('.table-rx .table > tbody').append(rx);
     });
 
-	// $('.table-rx .table > tbody').append();
-
     console.log("Rx table refreshed");
 });
-
-// function addRxToTable(patient_id, drug, status) {
-// 	console.log("addedRxToTable()");
-// 	console.log(drug);
-// 	console.log(drug.name);
-// 	$('.table-rx .table > tbody:last').append('<tr>' + 
-// 		'<td>' + patient_id + '</td>' + 
-// 		'<td>' + drug.name + '</td>' + 
-// 		'<td>' + drug.number + '</td>' + 
-// 		'<td>' + drug.mass + '</td>' + 
-// 		'<td>' + drug.quantity + '</td>' + 
-// 		'<td>' + status + '</td>' + 
-// 		'</tr>');
-		
-// 	};
