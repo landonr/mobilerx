@@ -92,6 +92,9 @@ class CameraController: UIViewController, UIImagePickerControllerDelegate, UINav
         cell.textLabel!.textColor = UIColor.whiteColor()
         cell.backgroundColor = UIColor.clearColor()
         cell.backgroundView?.backgroundColor = UIColor.blackColor()
+        var dinosaurView = UIImage(named: "dino.png")
+        var dinoView = UIImageView(dinosaurView)
+        cell.addSubview(dinoView)
         return cell
     }
     

@@ -10,8 +10,6 @@
 	<string>mobilerx</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>C1D6E1471285A5F33A240960759187C768F86BBF</key>
-		<string>https://github.com/iQmetrix/PlatformPOS.git</string>
 		<key>D0C9552EC772761F76A86FBBD679320B1CFECDB9</key>
 		<string>https://github.com/landonr/mobilerx.git</string>
 	</dict>
@@ -19,8 +17,6 @@
 	<string>mobilerx/mobilerx.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>C1D6E1471285A5F33A240960759187C768F86BBF</key>
-		<string>../../..</string>
 		<key>D0C9552EC772761F76A86FBBD679320B1CFECDB9</key>
 		<string>../..</string>
 	</dict>
@@ -32,14 +28,6 @@
 	<string>D0C9552EC772761F76A86FBBD679320B1CFECDB9</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>C1D6E1471285A5F33A240960759187C768F86BBF</string>
-			<key>IDESourceControlWCCName</key>
-			<string></string>
-		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
