@@ -14,6 +14,7 @@
 		8F4AEE1419D7366A009BB317 /* getStarted.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F4AEE1319D7366A009BB317 /* getStarted.png */; };
 		8F4AEE1619D74238009BB317 /* ready.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F4AEE1519D74238009BB317 /* ready.png */; };
 		8F4AEE1819D74A5E009BB317 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4AEE1719D74A5E009BB317 /* CameraController.swift */; };
+		8F6F524119D7ADB500CAA257 /* overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F6F524019D7ADB500CAA257 /* overlay.png */; };
 		8F9719AA19D72287005ACDFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9719A919D72287005ACDFE /* AppDelegate.swift */; };
 		8F9719AC19D72287005ACDFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9719AB19D72287005ACDFE /* ViewController.swift */; };
 		8F9719AF19D72287005ACDFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F9719AD19D72287005ACDFE /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 		8F9CFCC419D72C2C000E7F1B /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F9CFCC319D72C2C000E7F1B /* logo.png */; };
 		8F9CFCC619D72C6D000E7F1B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F9CFCC519D72C6D000E7F1B /* LaunchScreen.xib */; };
 		8F9CFCC819D72DD7000E7F1B /* bluecover.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F9CFCC719D72DD7000E7F1B /* bluecover.png */; };
+		8FAA4CC919D7A5F4004618AE /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAA4CC819D7A5F4004618AE /* SignInController.swift */; };
 		8FF0602B19D7761B00FFACD9 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0602819D7761B00FFACD9 /* ApiManager.swift */; };
 		8FF0602C19D7761B00FFACD9 /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0602919D7761B00FFACD9 /* HTTP.swift */; };
 		8FF0602D19D7761B00FFACD9 /* Objects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0602A19D7761B00FFACD9 /* Objects.swift */; };
@@ -54,6 +56,7 @@
 		8F4AEE1319D7366A009BB317 /* getStarted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = getStarted.png; sourceTree = "<group>"; };
 		8F4AEE1519D74238009BB317 /* ready.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ready.png; sourceTree = "<group>"; };
 		8F4AEE1719D74A5E009BB317 /* CameraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
+		8F6F524019D7ADB500CAA257 /* overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overlay.png; sourceTree = "<group>"; };
 		8F9719A419D72287005ACDFE /* mobilerx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mobilerx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F9719A819D72287005ACDFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F9719A919D72287005ACDFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +71,7 @@
 		8F9CFCC319D72C2C000E7F1B /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		8F9CFCC519D72C6D000E7F1B /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		8F9CFCC719D72DD7000E7F1B /* bluecover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bluecover.png; sourceTree = "<group>"; };
+		8FAA4CC819D7A5F4004618AE /* SignInController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
 		8FF0602819D7761B00FFACD9 /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		8FF0602919D7761B00FFACD9 /* HTTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
 		8FF0602A19D7761B00FFACD9 /* Objects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Objects.swift; sourceTree = "<group>"; };
@@ -129,6 +133,7 @@
 			children = (
 				8F9719A919D72287005ACDFE /* AppDelegate.swift */,
 				8F9719AB19D72287005ACDFE /* ViewController.swift */,
+				8FAA4CC819D7A5F4004618AE /* SignInController.swift */,
 				8F4AEE1719D74A5E009BB317 /* CameraController.swift */,
 				8FF0602E19D77A9700FFACD9 /* PrescriptionController.swift */,
 				8FF0603219D7852500FFACD9 /* ConfirmationController.swift */,
@@ -173,6 +178,7 @@
 		8F9CFCBE19D72A7F000E7F1B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				8F6F524019D7ADB500CAA257 /* overlay.png */,
 				8FF0603C19D79B1800FFACD9 /* close.png */,
 				8FF0603419D7857400FFACD9 /* confirmation.png */,
 				8F4AEE1519D74238009BB317 /* ready.png */,
@@ -299,6 +305,7 @@
 				8F9719AF19D72287005ACDFE /* Main.storyboard in Resources */,
 				8F9CFCC119D72A7F000E7F1B /* background.png in Resources */,
 				8FF0603B19D7994A00FFACD9 /* nocheck.png in Resources */,
+				8F6F524119D7ADB500CAA257 /* overlay.png in Resources */,
 				8F9719B119D72287005ACDFE /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,6 +390,7 @@
 				8FF0602F19D77A9700FFACD9 /* PrescriptionController.swift in Sources */,
 				8FF0602C19D7761B00FFACD9 /* HTTP.swift in Sources */,
 				8FF0602B19D7761B00FFACD9 /* ApiManager.swift in Sources */,
+				8FAA4CC919D7A5F4004618AE /* SignInController.swift in Sources */,
 				8F4AEE1819D74A5E009BB317 /* CameraController.swift in Sources */,
 				8FF0603319D7852500FFACD9 /* ConfirmationController.swift in Sources */,
 				8F9719AC19D72287005ACDFE /* ViewController.swift in Sources */,

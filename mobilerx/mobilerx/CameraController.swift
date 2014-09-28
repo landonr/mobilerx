@@ -27,13 +27,18 @@ class CameraController: UIViewController, UIImagePickerControllerDelegate, UINav
         super.viewDidAppear(animated)
         if !firstLaunch {
             firstLaunch=true
-            //loadDataFromFirebase()
+            loadDataFromFirebase()
             self.tableView.delegate = self
             self.tableView.dataSource = self
             if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
             {
+                var overlay = UIImage(named: "overlay.png")
+                var overlayView = UIImageView(image: overlay)
+                var vieww = UIView(frame: self.view.frame)
+                vieww.addSubview(overlayView)
                 imagePickerController.delegate = self
                 imagePickerController.sourceType = UIImagePickerControllerSourceType.Camera
+                imagePickerController.cameraOverlayView = vieww
                 imagePickerController.allowsEditing = false
                 //self.presentViewController(imagePickerController, animated: true, completion: { imageP in })
             }
@@ -42,7 +47,7 @@ class CameraController: UIViewController, UIImagePickerControllerDelegate, UINav
     
     func loadDataFromFirebase()
     {
-        var listRef = Firebase(url: "https://amber-inferno-3172.firebaseio.com/pharmacists")
+        var listRef = Firebase(url: "https://amber-inferno-3172.firebaseio.com/work_orders")
         listRef.observeEventType(.Value, withBlock: { snapshot in
             for id in snapshot.children.allObjects
             {
@@ -77,10 +82,11 @@ class CameraController: UIViewController, UIImagePickerControllerDelegate, UINav
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Default")
-        cell.textLabel!.text = self.pharmacists[indexPath.row].name
-        var address = self.pharmacists[indexPath.row].childSnapshotForPath("address").value as String
-        var distance = self.pharmacists[indexPath.row].childSnapshotForPath("distance").value as NSNumber
-        var detail = String(format: "%@, %@km", address, distance)
+        var pharmacy = self.pharmacists[indexPath.row].childSnapshotForPath("pharmacy").value as String
+        var date = self.pharmacists[indexPath.row].childSnapshotForPath("date").value as String
+        var detail = String(format: "%@, %@km", date, date)
+        cell.textLabel!.text = pharmacy
+        cell.textLabel!.font = UIFont(name: "Helvetica", size: 24)
         cell.detailTextLabel!.text = detail
         cell.detailTextLabel!.textColor = UIColor.whiteColor()
         cell.textLabel!.textColor = UIColor.whiteColor()
