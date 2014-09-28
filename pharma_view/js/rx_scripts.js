@@ -7,7 +7,6 @@ $(document).ready(function(){
 	console.log(GetURLParameter('id'));
 
 	if (typeof GetURLParameter('id') !== "undefined") {
-		// $("#patient-id").text(GetURLParameter('id'));
 		$('#patient-id').val(GetURLParameter('id'));
 	}
 	
@@ -72,3 +71,8 @@ rx_ref.on('value', function(snapshot) {
 
     console.log("Rx table refreshed");
 });
+
+// serial -> jpeg
+var canvas = document.getElementById("rx-image");
+var jpegUrl = canvas.toDataURL(); //
+document.getElementById("rx-image").value = jpegUrl;
