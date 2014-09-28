@@ -10,8 +10,8 @@ class ConfirmationController: UIViewController
     @IBOutlet var closeButton: UIImageView!
     @IBOutlet var PharmacistLabel: UILabel!
     @IBOutlet var submitOrderLabel: UILabel!
-    @IBOutlet weak var networkLayer: UIView!
-
+    @IBOutlet var networkLayer: UIView!
+    
     var prescriptionImage: UIImage!
     var pharmaName: String!
     var pharmaId : String!
@@ -36,7 +36,7 @@ class ConfirmationController: UIViewController
     @IBAction func submitTapped(sender: AnyObject) {
         var imageData : NSData = UIImageJPEGRepresentation(prescriptionImage, 0.6)
         var i: String = imageData.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.allZeros)
-        var work = createWorkOrder(patientId, "123", i)
+        var work = createWorkOrder(patientId, "123", i, pharmaName)
         
         var ind = UIActivityIndicatorView(frame: CGRectMake(0,0, 50, 50)) as UIActivityIndicatorView
         
@@ -45,12 +45,15 @@ class ConfirmationController: UIViewController
         ind.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.WhiteLarge
         self.view.addSubview(ind)
         ind.startAnimating()
-        networkLayer.alpha = 0.65
+        UIView.animateWithDuration(0.5, animations: {
+            self.networkLayer.alpha = 0.65
+        });
         networkLayer.hidden = false
         fb.postWorkOrder(work, { ()->Void in
             ind.stopAnimating()
             self.networkLayer.alpha = 0
             self.networkLayer.hidden = true
+            self.performSegueWithIdentifier("showHome", sender: self)
         })
     }
     

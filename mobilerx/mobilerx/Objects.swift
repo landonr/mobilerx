@@ -69,11 +69,13 @@ func createDrug(name : String, number : Int, mass : Double, packageQuantity : In
     return d
 }
 
-func createWorkOrder(patientId: String, pharmId : String, image : String) -> Dictionary<String, AnyObject> {
+func createWorkOrder(patientId: String, pharmId : String, image : String, name: String) -> Dictionary<String, AnyObject> {
     var d = Dictionary<String, AnyObject>()
     d["patientId"] = patientId
     d["pharmId"] = pharmId
     d["image"] = image
+    d["name"] = name
+    d["date"] = NSDate()
     return d
 }
 

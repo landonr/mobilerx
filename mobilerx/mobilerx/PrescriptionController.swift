@@ -36,6 +36,14 @@ class PrescriptionController: UIViewController, UITableViewDelegate, UITableView
         cell.textLabel!.textColor = UIColor.whiteColor()
         cell.backgroundColor = UIColor.clearColor()
         cell.backgroundView?.backgroundColor = UIColor.blackColor()
+        var dinosaurView = UIImage(named: "dino.png")
+        var dinoView = UIImageView(image: dinosaurView)
+        dinoView.frame = CGRect(x: 290, y: 10, width: 30, height: 30)
+        var fax = self.pharmacists[indexPath.row].childSnapshotForPath("fax").value as NSNumber
+        if fax == 1
+        {
+            cell.addSubview(dinoView)
+        }
         return cell
     }
     

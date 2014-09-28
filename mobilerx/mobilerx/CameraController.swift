@@ -47,7 +47,7 @@ class CameraController: UIViewController, UIImagePickerControllerDelegate, UINav
     
     func loadDataFromFirebase()
     {
-        var listRef = Firebase(url: "https://amber-inferno-3172.firebaseio.com/work_orders")
+        var listRef = Firebase(url: "https://amber-inferno-3172.firebaseio.com/work_order")
         listRef.observeEventType(.Value, withBlock: { snapshot in
             for id in snapshot.children.allObjects
             {
@@ -92,9 +92,7 @@ class CameraController: UIViewController, UIImagePickerControllerDelegate, UINav
         cell.textLabel!.textColor = UIColor.whiteColor()
         cell.backgroundColor = UIColor.clearColor()
         cell.backgroundView?.backgroundColor = UIColor.blackColor()
-        var dinosaurView = UIImage(named: "dino.png")
-        var dinoView = UIImageView(dinosaurView)
-        cell.addSubview(dinoView)
+
         return cell
     }
     
