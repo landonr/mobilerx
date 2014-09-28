@@ -5,11 +5,11 @@ $(document).ready(function(){
 	
 	refresh_work_orders();
 
-	function addRxToTable(id, patient_name, priority) {
+	function addRxToTable(id, patientId, patient_name, priority) {
 		$('.table-wo .table > tbody:last').append('<tr>' + 
 			'<td>' + patient_name + '</td>' + 
 			'<td>' + priority + '</td>' + 
-			'<td><a href="index.html?id=' + id +'" class="btn btn-default" id="createRx">Create Rx</a></td>' +
+			'<td><a href="index.html?id=' + id + "&patientId=" + patientId + '" class="btn btn-default" id="createRx">Create Rx</a></td>' +
 
 			'</tr>');
 		console.log("addedRxToTable()");
@@ -21,7 +21,7 @@ $(document).ready(function(){
 	
 			snapshot.forEach(function(obj) {
 				var id = obj.name()
-				console.log(obj.val()["doctorId"]);
+				console.log(obj.val().doctorID);
 
 				var priority = obj.val()["priority"];
 				var patientId = obj.val()["patientId"];
@@ -30,9 +30,8 @@ $(document).ready(function(){
 
 				myFirebaseRef.child('patients/' + patientId).on('value', function(obj) {
 					console.log(obj.val());
-					var name = obj.val()["firstName"] + " " + obj.val()["lastName"];
 
-					addRxToTable(id, name, priority.toUpperCase());
+					addRxToTable(id, patientId, "Jason", priority.toUpperCase());
 
 				}, function (errorObject) {
 					console.log('The read failed: ' + errorObject.code);

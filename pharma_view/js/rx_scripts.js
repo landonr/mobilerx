@@ -1,15 +1,7 @@
 var myFirebaseRef = new Firebase("https://amber-inferno-3172.firebaseio.com/");
 var rx_ref = myFirebaseRef.child('rx');
 
-
-$(document).ready(function(){
-
-	console.log(GetURLParameter('id'));
-
-	if (typeof GetURLParameter('id') !== "undefined") {
-		$('#patient-id').val(GetURLParameter('id'));
-	}
-	
+$(document).ready(function(){	
 	$("#createRx").click(function(){
 		console.log("createRxclicked")
 
@@ -47,6 +39,37 @@ function GetURLParameter(sParam)
     }
 }
 
+function loadImage()
+{
+	var orderID = GetURLParameter('id')
+	//console.log(GetURLParameter('id'));
+	var _patientID;
+	if (typeof GetURLParameter('id') !== "undefined") {
+		$('#patient-id').val(GetURLParameter('id'));
+		_patientID = GetURLParameter('patientId')
+	}
+	var canvas = document.getElementById("canvas");
+	var wo_ref = myFirebaseRef.child('work_orders');
+	wo_ref.on('value', function (snapshot) {
+		snapshot.forEach(function(obj) {
+			if(obj.name()==orderID){
+				var jpegData = obj.val()["image"];
+				var jpegUrl = canvas.toDataURL(jpegData); //
+				var ctx = canvas.getContext("2d");
+				if(ctx){
+					var image = new Image();
+					image.src = jpegUrl;
+					image.onload = function() {
+						ctx.drawImage(image, 0,0);
+						ctx.fillStyle = "rgb(200,0,0)";  
+						ctx.fillRect(10, 10, 55, 50);
+					}
+				}
+			}
+		});
+	});
+}
+
 // new Rx table update
 rx_ref.on('value', function(snapshot) {
 	console.log("Rx added to Firebase");
@@ -72,7 +95,4 @@ rx_ref.on('value', function(snapshot) {
     console.log("Rx table refreshed");
 });
 
-// serial -> jpeg
-var canvas = document.getElementById("rx-image");
-var jpegUrl = canvas.toDataURL(); //
-document.getElementById("rx-image").value = jpegUrl;
+loadImage();
