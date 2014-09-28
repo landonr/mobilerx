@@ -13,6 +13,9 @@
             <string>MissionGothic-Thin</string>
             <string>MissionGothic-Thin</string>
             <string>MissionGothic-Thin</string>
+            <string>MissionGothic-Thin</string>
+            <string>MissionGothic-Thin</string>
+            <string>MissionGothic-Thin</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -79,6 +82,16 @@
                                             <outletCollection property="gestureRecognizers" destination="6n3-JO-5Zx" appends="YES" id="x9o-6e-Nv3"/>
                                         </connections>
                                     </imageView>
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign In" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1z-lH-fsa">
+                                        <rect key="frame" x="255" y="23" width="82" height="30"/>
+                                        <gestureRecognizers/>
+                                        <fontDescription key="fontDescription" name="MissionGothic-Thin" family="Mission Gothic" pointSize="24"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="whU-13-r6G" appends="YES" id="orH-LL-9mF"/>
+                                        </connections>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
@@ -101,6 +114,7 @@
                         <outlet property="readyButton" destination="p0t-O2-16U" id="tsG-oi-i1Y"/>
                         <outlet property="welcomeView" destination="LbJ-vy-YDH" id="KlX-in-dNd"/>
                         <segue destination="sxx-Jh-FQv" kind="show" identifier="showCamera" id="kal-vh-yd4"/>
+                        <segue destination="bJL-hQ-dI5" kind="presentation" identifier="showSignIn" modalTransitionStyle="crossDissolve" id="mxL-5f-a9H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -109,8 +123,13 @@
                         <action selector="readyTapped:" destination="BYZ-38-t0r" id="1uZ-eY-ua9"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="whU-13-r6G">
+                    <connections>
+                        <action selector="signinTapped:" destination="BYZ-38-t0r" id="mgX-Ap-hBN"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="239.5" y="102.5"/>
+            <point key="canvasLocation" x="235.5" y="94.5"/>
         </scene>
         <!--Camera Controller-->
         <scene sceneID="lrW-yd-VVh">
@@ -147,7 +166,7 @@
                                         <rect key="frame" x="30" y="83" width="314" height="424"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="zfN-Dq-9Tr">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="65" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="zfN-Dq-9Tr">
                                         <rect key="frame" x="15" y="83" width="329" height="424"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableView>
@@ -174,6 +193,81 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="784.5" y="102.5"/>
+        </scene>
+        <!--Sign In Controller-->
+        <scene sceneID="Q5C-vv-Sm3">
+            <objects>
+                <viewController id="bJL-hQ-dI5" customClass="SignInController" customModule="mobilerx" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lKF-da-XkN"/>
+                        <viewControllerLayoutGuide type="bottom" id="eI9-ap-Hjs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4bM-nC-ruR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="TopLeft" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DwH-JT-qeI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="fNL-8n-z2u">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="667"/>
+                                    </imageView>
+                                    <view alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3lk-N4-zUA">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <subviews>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign In" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2h-4s-BUb">
+                                                <rect key="frame" x="240" y="311" width="95" height="46"/>
+                                                <gestureRecognizers/>
+                                                <fontDescription key="fontDescription" name="MissionGothic-Thin" family="Mission Gothic" pointSize="34"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="uxm-4l-bzz" appends="YES" id="qIn-ps-ooe"/>
+                                                </connections>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="nXa-gc-DXh">
+                                        <rect key="frame" x="127" y="25" width="121" height="30"/>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Health Card #" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zVW-vP-QDo">
+                                        <rect key="frame" x="40" y="244" width="295" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8t2-8l-hbJ">
+                                        <rect key="frame" x="40" y="282" width="295" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign In to mobileRx" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTS-8Z-fxD">
+                                        <rect key="frame" x="40" y="166" width="295" height="63"/>
+                                        <fontDescription key="fontDescription" name="MissionGothic-Thin" family="Mission Gothic" pointSize="40"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="cameraTapRecognizer" destination="aWB-pW-oTP" id="vEI-0u-WHM"/>
+                        <segue destination="sxx-Jh-FQv" kind="presentation" identifier="showHome" modalTransitionStyle="crossDissolve" id="anR-2R-tQN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k8c-oa-QF5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="uxm-4l-bzz">
+                    <connections>
+                        <action selector="signInTapped:" destination="bJL-hQ-dI5" id="3VY-Ac-Lzv"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="532.5" y="880.5"/>
         </scene>
         <!--Prescription Controller-->
         <scene sceneID="zlp-EI-PKF">
@@ -448,6 +542,6 @@
         <image name="welcomeTo.png" width="673" height="112"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2gy-SR-6Bh"/>
+        <segue reference="anR-2R-tQN"/>
     </inferredMetricsTieBreakers>
 </document>

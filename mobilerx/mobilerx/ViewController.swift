@@ -77,6 +77,11 @@ class ViewController: UIViewController {
 
     }
     
+    @IBAction func signinTapped(sender: AnyObject) {
+        self.performSegueWithIdentifier("showSignIn", sender: self)
+
+    }
+    
     func moveBackgroundRight()
     {
         var timer = NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: Selector("moveBackgroundLeft"), userInfo: nil, repeats: true)
