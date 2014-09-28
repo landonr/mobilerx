@@ -10,14 +10,18 @@ class ConfirmationController: UIViewController
     @IBOutlet var closeButton: UIImageView!
     @IBOutlet var PharmacistLabel: UILabel!
     @IBOutlet var submitOrderLabel: UILabel!
+    @IBOutlet weak var networkLayer: UIView!
+
     var prescriptionImage: UIImage!
     var pharmaName: String!
     var pharmaId : String!
     var checkerPecker = false
     var state = -1
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         self.PharmacistLabel.text = pharmaName
+        networkLayer.hidden = true
     }
     
     func setPharmacistLabel(name: String)
@@ -41,8 +45,12 @@ class ConfirmationController: UIViewController
         ind.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.WhiteLarge
         self.view.addSubview(ind)
         ind.startAnimating()
+        networkLayer.alpha = 0.65
+        networkLayer.hidden = false
         fb.postWorkOrder(work, { ()->Void in
             ind.stopAnimating()
+            self.networkLayer.alpha = 0
+            self.networkLayer.hidden = true
         })
     }
     

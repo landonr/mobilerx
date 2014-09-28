@@ -345,10 +345,6 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="iUI-uc-x6u">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="667"/>
                                     </imageView>
-                                    <view alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iuo-aj-jE9">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
                                     <label opaque="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Submit Order" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZP-89-cFu">
                                         <rect key="frame" x="31" y="550" width="312" height="69"/>
                                         <gestureRecognizers/>
@@ -455,6 +451,14 @@
                                             <outletCollection property="gestureRecognizers" destination="bTK-Yj-CCl" appends="YES" id="Pzt-Y9-IRC"/>
                                         </connections>
                                     </imageView>
+                                    <view hidden="YES" alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5TW-AL-uWk">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iuo-aj-jE9">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
@@ -468,6 +472,7 @@
                         <outlet property="closeButton" destination="VGz-D0-C3u" id="L3I-oG-5oP"/>
                         <outlet property="deliveryChecker" destination="pJq-dh-Bjf" id="NcL-qx-8sU"/>
                         <outlet property="immediatelyChecker" destination="B1Z-RU-noi" id="3OG-Oe-5Pv"/>
+                        <outlet property="networkLayer" destination="5TW-AL-uWk" id="rCc-ds-lPs"/>
                         <outlet property="submitOrderLabel" destination="FZP-89-cFu" id="8Qw-Eq-znI"/>
                         <outlet property="todayChecker" destination="ZOa-f0-ejD" id="gVY-CJ-FNR"/>
                         <outlet property="weekChecker" destination="Uwc-bw-gel" id="sck-5a-QkM"/>
@@ -542,6 +547,6 @@
         <image name="welcomeTo.png" width="673" height="112"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="anR-2R-tQN"/>
+        <segue reference="2gy-SR-6Bh"/>
     </inferredMetricsTieBreakers>
 </document>

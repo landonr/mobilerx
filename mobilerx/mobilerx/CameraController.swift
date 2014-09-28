@@ -38,7 +38,7 @@ class CameraController: UIViewController, UIImagePickerControllerDelegate, UINav
                 vieww.addSubview(overlayView)
                 imagePickerController.delegate = self
                 imagePickerController.sourceType = UIImagePickerControllerSourceType.Camera
-                imagePickerController.cameraOverlayView = vieww
+                //imagePickerController.cameraOverlayView = vieww
                 imagePickerController.allowsEditing = false
                 //self.presentViewController(imagePickerController, animated: true, completion: { imageP in })
             }
