@@ -3,6 +3,18 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Mission Gothic Thin.otf">
+            <string>MissionGothic-Thin</string>
+            <string>MissionGothic-Thin</string>
+            <string>MissionGothic-Thin</string>
+            <string>MissionGothic-Thin</string>
+            <string>MissionGothic-Thin</string>
+            <string>MissionGothic-Thin</string>
+            <string>MissionGothic-Thin</string>
+            <string>MissionGothic-Thin</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -73,6 +85,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="TapGestureOutlet" destination="6n3-JO-5Zx" id="mNs-qQ-GZD"/>
@@ -130,8 +143,12 @@
                                             <outletCollection property="gestureRecognizers" destination="aWB-pW-oTP" appends="YES" id="CP6-db-lNA"/>
                                         </connections>
                                     </imageView>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="zfN-Dq-9Tr">
+                                    <view alpha="0.10000000000000001" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W9I-JI-SZ6">
                                         <rect key="frame" x="30" y="83" width="314" height="424"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="zfN-Dq-9Tr">
+                                        <rect key="frame" x="15" y="83" width="329" height="424"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableView>
                                 </subviews>
@@ -140,11 +157,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="cameraButton" destination="YKx-53-d1n" id="VxC-PF-0W6"/>
                         <outlet property="cameraTapRecognizer" destination="aWB-pW-oTP" id="qDp-2D-8mY"/>
                         <outlet property="tableView" destination="zfN-Dq-9Tr" id="BOg-6P-v1O"/>
+                        <segue destination="t2e-On-dW7" kind="presentation" identifier="showPrescription" modalTransitionStyle="crossDissolve" id="9et-WS-aEn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pIN-Et-e4E" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -156,14 +175,279 @@
             </objects>
             <point key="canvasLocation" x="784.5" y="102.5"/>
         </scene>
+        <!--Prescription Controller-->
+        <scene sceneID="zlp-EI-PKF">
+            <objects>
+                <viewController id="t2e-On-dW7" customClass="PrescriptionController" customModule="mobilerx" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="T11-3w-Is8"/>
+                        <viewControllerLayoutGuide type="bottom" id="KIV-66-xTh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PQD-aR-xiE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="TopLeft" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="afX-Qg-Cov">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qpy-Yj-MN9">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="667"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bluecover.png" translatesAutoresizingMaskIntoConstraints="NO" id="l3G-sR-z5w">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="rko-RJ-FA4">
+                                        <rect key="frame" x="127" y="25" width="121" height="30"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CH7-8p-oV7">
+                                        <rect key="frame" x="30" y="530" width="314" height="108"/>
+                                        <gestureRecognizers/>
+                                    </imageView>
+                                    <view alpha="0.10000000149011612" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JIv-R7-5zt">
+                                        <rect key="frame" x="30" y="136" width="314" height="371"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="kti-Xu-MxZ">
+                                        <rect key="frame" x="15" y="136" width="329" height="371"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selectAPharma.png" translatesAutoresizingMaskIntoConstraints="NO" id="zbG-Uz-b4Q">
+                                        <rect key="frame" x="30" y="79" width="314" height="29"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="cameraTapRecognizer" destination="aWB-pW-oTP" id="ni3-V6-1ov"/>
+                        <outlet property="prescriptionView" destination="CH7-8p-oV7" id="iJD-9g-MGm"/>
+                        <outlet property="tableView" destination="kti-Xu-MxZ" id="T4w-EY-9n2"/>
+                        <segue destination="CsO-cq-y02" kind="presentation" identifier="showConfirmation" modalTransitionStyle="coverVertical" id="KQM-ow-PZ5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RPK-VJ-hQR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1342.5" y="102.5"/>
+        </scene>
+        <!--Confirmation Controller-->
+        <scene sceneID="9P4-Yv-Wpa">
+            <objects>
+                <viewController id="CsO-cq-y02" customClass="ConfirmationController" customModule="mobilerx" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3t1-Hz-Mea"/>
+                        <viewControllerLayoutGuide type="bottom" id="iXk-kg-VTb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Y47-cN-hc0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="TopLeft" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="88E-y6-XZM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="iUI-uc-x6u">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="667"/>
+                                    </imageView>
+                                    <view alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iuo-aj-jE9">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <label opaque="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Submit Order" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZP-89-cFu">
+                                        <rect key="frame" x="31" y="550" width="312" height="69"/>
+                                        <gestureRecognizers/>
+                                        <fontDescription key="fontDescription" name="MissionGothic-Thin" family="Mission Gothic" pointSize="62"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="o90-AR-xYd" appends="YES" id="AHq-Xo-ScF"/>
+                                        </connections>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="When will you be picking it up?" lineBreakMode="middleTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o4z-4z-jNq">
+                                        <rect key="frame" x="47" y="247" width="280" height="84"/>
+                                        <fontDescription key="fontDescription" name="MissionGothic-Thin" family="Mission Gothic" pointSize="29"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="kPt-Pb-VPs">
+                                        <rect key="frame" x="127" y="25" width="121" height="30"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="JCX-hR-z96">
+                                        <rect key="frame" x="30" y="135" width="314" height="53"/>
+                                        <fontDescription key="fontDescription" name="MissionGothic-Thin" family="Mission Gothic" pointSize="38"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Immediately" textAlignment="right" lineBreakMode="middleTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdf-45-bbb">
+                                        <rect key="frame" x="-32" y="336" width="280" height="34"/>
+                                        <gestureRecognizers/>
+                                        <fontDescription key="fontDescription" name="MissionGothic-Thin" family="Mission Gothic" pointSize="36"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="GSz-Iq-a6P" appends="YES" id="Eti-9R-laR"/>
+                                        </connections>
+                                    </label>
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Today" textAlignment="right" lineBreakMode="middleTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jV-I9-6BE">
+                                        <rect key="frame" x="-32" y="378" width="280" height="34"/>
+                                        <gestureRecognizers/>
+                                        <fontDescription key="fontDescription" name="MissionGothic-Thin" family="Mission Gothic" pointSize="36"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="ywE-P4-ZyQ" appends="YES" id="j9N-gt-Zvh"/>
+                                        </connections>
+                                    </label>
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This Week" textAlignment="right" lineBreakMode="middleTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KH2-FI-5g8">
+                                        <rect key="frame" x="-32" y="420" width="280" height="34"/>
+                                        <gestureRecognizers/>
+                                        <fontDescription key="fontDescription" name="MissionGothic-Thin" family="Mission Gothic" pointSize="36"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="N8y-f4-KHB" appends="YES" id="B7a-Yj-1Ta"/>
+                                        </connections>
+                                    </label>
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Delivery" textAlignment="right" lineBreakMode="middleTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZyW-SF-iaK">
+                                        <rect key="frame" x="-32" y="462" width="280" height="34"/>
+                                        <gestureRecognizers/>
+                                        <fontDescription key="fontDescription" name="MissionGothic-Thin" family="Mission Gothic" pointSize="36"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="eGr-uj-fKb" appends="YES" id="bqt-Iq-G9k"/>
+                                        </connections>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your prescription will be sent to:" lineBreakMode="middleTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tH-Mx-faN">
+                                        <rect key="frame" x="30" y="43" width="314" height="100"/>
+                                        <fontDescription key="fontDescription" name="MissionGothic-Thin" family="Mission Gothic" pointSize="29"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nocheck.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZOa-f0-ejD">
+                                        <rect key="frame" x="272" y="380" width="30" height="30"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="G7B-81-FDl" appends="YES" id="0lM-pL-Pp0"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nocheck.png" translatesAutoresizingMaskIntoConstraints="NO" id="Uwc-bw-gel">
+                                        <rect key="frame" x="272" y="422" width="30" height="30"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="kg5-3L-PX2" appends="YES" id="2Nw-YI-R50"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nocheck.png" translatesAutoresizingMaskIntoConstraints="NO" id="pJq-dh-Bjf">
+                                        <rect key="frame" x="272" y="464" width="30" height="30"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="acL-4i-XjM" appends="YES" id="cpj-uf-m5j"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nocheck.png" translatesAutoresizingMaskIntoConstraints="NO" id="B1Z-RU-noi">
+                                        <rect key="frame" x="272" y="338" width="30" height="30"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="kcf-9j-2CF" appends="YES" id="fB0-ED-QtJ"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="close.png" translatesAutoresizingMaskIntoConstraints="NO" id="VGz-D0-C3u">
+                                        <rect key="frame" x="30" y="25" width="30" height="30"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="bTK-Yj-CCl" appends="YES" id="Pzt-Y9-IRC"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="PharmacistLabel" destination="JCX-hR-z96" id="XGs-wk-4DA"/>
+                        <outlet property="closeButton" destination="VGz-D0-C3u" id="L3I-oG-5oP"/>
+                        <outlet property="deliveryChecker" destination="pJq-dh-Bjf" id="NcL-qx-8sU"/>
+                        <outlet property="immediatelyChecker" destination="B1Z-RU-noi" id="3OG-Oe-5Pv"/>
+                        <outlet property="submitOrderLabel" destination="FZP-89-cFu" id="8Qw-Eq-znI"/>
+                        <outlet property="todayChecker" destination="ZOa-f0-ejD" id="gVY-CJ-FNR"/>
+                        <outlet property="weekChecker" destination="Uwc-bw-gel" id="sck-5a-QkM"/>
+                        <segue destination="sxx-Jh-FQv" kind="presentation" identifier="showHome" modalTransitionStyle="crossDissolve" id="2gy-SR-6Bh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aT5-4a-qjy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="GSz-Iq-a6P">
+                    <connections>
+                        <action selector="immediatelyTapped:" destination="CsO-cq-y02" id="bRj-Og-jTz"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="ywE-P4-ZyQ">
+                    <connections>
+                        <action selector="todayTapped:" destination="CsO-cq-y02" id="dnT-mv-RO3"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="eGr-uj-fKb">
+                    <connections>
+                        <action selector="deliveryTapped:" destination="CsO-cq-y02" id="zQQ-2r-5oR"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="N8y-f4-KHB">
+                    <connections>
+                        <action selector="weekTapped:" destination="CsO-cq-y02" id="5Rn-oE-e4W"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="bTK-Yj-CCl">
+                    <connections>
+                        <action selector="closeTapped:" destination="CsO-cq-y02" id="ZjZ-Mw-3l4"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="o90-AR-xYd">
+                    <connections>
+                        <action selector="submitTapped:" destination="CsO-cq-y02" id="swO-mx-7yb"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="G7B-81-FDl">
+                    <connections>
+                        <action selector="todayTapped2:" destination="CsO-cq-y02" id="cfC-NZ-hAy"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="kg5-3L-PX2">
+                    <connections>
+                        <action selector="weekTapped2:" destination="CsO-cq-y02" id="Bbi-d9-VNh"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="acL-4i-XjM">
+                    <connections>
+                        <action selector="deliveryTapped2:" destination="CsO-cq-y02" id="xvi-gC-fOs"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="kcf-9j-2CF">
+                    <connections>
+                        <action selector="immediatelyTapped2:" destination="CsO-cq-y02" id="IEG-gd-Pca"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1886.5" y="102.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="background.png" width="2555" height="1704"/>
         <image name="bluecover.png" width="960" height="1704"/>
         <image name="cameraIcon.png" width="216" height="216"/>
+        <image name="close.png" width="128" height="128"/>
         <image name="getStarted.png" width="748" height="258"/>
         <image name="logo.png" width="678" height="167"/>
+        <image name="nocheck.png" width="128" height="128"/>
         <image name="ready.png" width="323" height="142"/>
+        <image name="selectAPharma.png" width="815" height="75"/>
         <image name="welcomeTo.png" width="673" height="112"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="2gy-SR-6Bh"/>
+    </inferredMetricsTieBreakers>
 </document>

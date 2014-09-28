@@ -26,6 +26,14 @@
 		8FF0602B19D7761B00FFACD9 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0602819D7761B00FFACD9 /* ApiManager.swift */; };
 		8FF0602C19D7761B00FFACD9 /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0602919D7761B00FFACD9 /* HTTP.swift */; };
 		8FF0602D19D7761B00FFACD9 /* Objects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0602A19D7761B00FFACD9 /* Objects.swift */; };
+		8FF0602F19D77A9700FFACD9 /* PrescriptionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0602E19D77A9700FFACD9 /* PrescriptionController.swift */; };
+		8FF0603119D782EA00FFACD9 /* selectAPharma.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF0603019D782EA00FFACD9 /* selectAPharma.png */; };
+		8FF0603319D7852500FFACD9 /* ConfirmationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0603219D7852500FFACD9 /* ConfirmationController.swift */; };
+		8FF0603519D7857400FFACD9 /* confirmation.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF0603419D7857400FFACD9 /* confirmation.png */; };
+		8FF0603719D7866800FFACD9 /* Mission Gothic Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8FF0603619D7866800FFACD9 /* Mission Gothic Thin.otf */; };
+		8FF0603A19D7994A00FFACD9 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF0603819D7994A00FFACD9 /* check.png */; };
+		8FF0603B19D7994A00FFACD9 /* nocheck.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF0603919D7994A00FFACD9 /* nocheck.png */; };
+		8FF0603D19D79B1800FFACD9 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FF0603C19D79B1800FFACD9 /* close.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +71,14 @@
 		8FF0602819D7761B00FFACD9 /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		8FF0602919D7761B00FFACD9 /* HTTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
 		8FF0602A19D7761B00FFACD9 /* Objects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Objects.swift; sourceTree = "<group>"; };
+		8FF0602E19D77A9700FFACD9 /* PrescriptionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrescriptionController.swift; sourceTree = "<group>"; };
+		8FF0603019D782EA00FFACD9 /* selectAPharma.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selectAPharma.png; sourceTree = "<group>"; };
+		8FF0603219D7852500FFACD9 /* ConfirmationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationController.swift; sourceTree = "<group>"; };
+		8FF0603419D7857400FFACD9 /* confirmation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = confirmation.png; sourceTree = "<group>"; };
+		8FF0603619D7866800FFACD9 /* Mission Gothic Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mission Gothic Thin.otf"; sourceTree = "<group>"; };
+		8FF0603819D7994A00FFACD9 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
+		8FF0603919D7994A00FFACD9 /* nocheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nocheck.png; sourceTree = "<group>"; };
+		8FF0603C19D79B1800FFACD9 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
 		A959CBF2AA7E43D1B259ED5D /* Pods-mobilerxTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mobilerxTests.xcconfig"; path = "Pods/Pods-mobilerxTests.xcconfig"; sourceTree = "<group>"; };
 		AA8D087D555A4E278E18FA56 /* Pods-mobilerx.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mobilerx.xcconfig"; path = "Pods/Pods-mobilerx.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,8 +129,10 @@
 			children = (
 				8F9719A919D72287005ACDFE /* AppDelegate.swift */,
 				8F9719AB19D72287005ACDFE /* ViewController.swift */,
-				8F9719AD19D72287005ACDFE /* Main.storyboard */,
 				8F4AEE1719D74A5E009BB317 /* CameraController.swift */,
+				8FF0602E19D77A9700FFACD9 /* PrescriptionController.swift */,
+				8FF0603219D7852500FFACD9 /* ConfirmationController.swift */,
+				8F9719AD19D72287005ACDFE /* Main.storyboard */,
 				8FF0602819D7761B00FFACD9 /* ApiManager.swift */,
 				8FF0602919D7761B00FFACD9 /* HTTP.swift */,
 				8FF0602A19D7761B00FFACD9 /* Objects.swift */,
@@ -155,6 +173,8 @@
 		8F9CFCBE19D72A7F000E7F1B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				8FF0603C19D79B1800FFACD9 /* close.png */,
+				8FF0603419D7857400FFACD9 /* confirmation.png */,
 				8F4AEE1519D74238009BB317 /* ready.png */,
 				8F4AEE1319D7366A009BB317 /* getStarted.png */,
 				8F9CFCC719D72DD7000E7F1B /* bluecover.png */,
@@ -162,6 +182,10 @@
 				8F9CFCBF19D72A7F000E7F1B /* background.png */,
 				8F4AEE1119D732E8009BB317 /* welcomeTo.png */,
 				8F27A08B19D75CDF0044DEDF /* cameraIcon.png */,
+				8FF0603019D782EA00FFACD9 /* selectAPharma.png */,
+				8FF0603619D7866800FFACD9 /* Mission Gothic Thin.otf */,
+				8FF0603819D7994A00FFACD9 /* check.png */,
+				8FF0603919D7994A00FFACD9 /* nocheck.png */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -260,15 +284,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FF0603519D7857400FFACD9 /* confirmation.png in Resources */,
 				8F4AEE1419D7366A009BB317 /* getStarted.png in Resources */,
+				8FF0603D19D79B1800FFACD9 /* close.png in Resources */,
+				8FF0603A19D7994A00FFACD9 /* check.png in Resources */,
 				8F4AEE1619D74238009BB317 /* ready.png in Resources */,
+				8FF0603119D782EA00FFACD9 /* selectAPharma.png in Resources */,
 				8F9CFCC619D72C6D000E7F1B /* LaunchScreen.xib in Resources */,
+				8FF0603719D7866800FFACD9 /* Mission Gothic Thin.otf in Resources */,
 				8F9CFCC819D72DD7000E7F1B /* bluecover.png in Resources */,
 				8F4AEE1219D732E8009BB317 /* welcomeTo.png in Resources */,
 				8F27A08C19D75CDF0044DEDF /* cameraIcon.png in Resources */,
 				8F9CFCC419D72C2C000E7F1B /* logo.png in Resources */,
 				8F9719AF19D72287005ACDFE /* Main.storyboard in Resources */,
 				8F9CFCC119D72A7F000E7F1B /* background.png in Resources */,
+				8FF0603B19D7994A00FFACD9 /* nocheck.png in Resources */,
 				8F9719B119D72287005ACDFE /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,9 +380,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FF0602F19D77A9700FFACD9 /* PrescriptionController.swift in Sources */,
 				8FF0602C19D7761B00FFACD9 /* HTTP.swift in Sources */,
 				8FF0602B19D7761B00FFACD9 /* ApiManager.swift in Sources */,
 				8F4AEE1819D74A5E009BB317 /* CameraController.swift in Sources */,
+				8FF0603319D7852500FFACD9 /* ConfirmationController.swift in Sources */,
 				8F9719AC19D72287005ACDFE /* ViewController.swift in Sources */,
 				8FF0602D19D7761B00FFACD9 /* Objects.swift in Sources */,
 				8F9719AA19D72287005ACDFE /* AppDelegate.swift in Sources */,

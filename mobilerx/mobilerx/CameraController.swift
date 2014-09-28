@@ -20,14 +20,14 @@ class CameraController: UIViewController, UIImagePickerControllerDelegate, UINav
     @IBOutlet var tableView: UITableView!
     
     var pharmacists: NSMutableArray = []
-    
+    var myImage: UIImage!
     
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         if !firstLaunch {
             firstLaunch=true
-            loadDataFromFirebase()
+            //loadDataFromFirebase()
             self.tableView.delegate = self
             self.tableView.dataSource = self
             if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
@@ -35,9 +35,7 @@ class CameraController: UIViewController, UIImagePickerControllerDelegate, UINav
                 imagePickerController.delegate = self
                 imagePickerController.sourceType = UIImagePickerControllerSourceType.Camera
                 imagePickerController.allowsEditing = false
-                self.presentViewController(imagePickerController, animated: true, completion: { imageP in
-                    
-                })
+                //self.presentViewController(imagePickerController, animated: true, completion: { imageP in })
             }
         }
     }
@@ -48,7 +46,6 @@ class CameraController: UIViewController, UIImagePickerControllerDelegate, UINav
         listRef.observeEventType(.Value, withBlock: { snapshot in
             for id in snapshot.children.allObjects
             {
-                println(id.name)
                 self.pharmacists.addObject(id)
             }
             self.tableView.reloadData()
@@ -57,10 +54,10 @@ class CameraController: UIViewController, UIImagePickerControllerDelegate, UINav
     
     
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!){
-        println("i've got an image");
-        imagePickerController.dismissViewControllerAnimated(true, completion: nil)
-        
-        
+        myImage=image
+        imagePickerController.dismissViewControllerAnimated(true, completion: {
+            self.performSegueWithIdentifier("showPrescription", sender: self)
+        })
     }
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
@@ -68,7 +65,6 @@ class CameraController: UIViewController, UIImagePickerControllerDelegate, UINav
     }
     
     @IBAction func cameraButtonTouched(sender: AnyObject) {
-        println("hey")
         self.presentViewController(imagePickerController, animated: true, completion: { imageP in
             
         })
@@ -86,8 +82,18 @@ class CameraController: UIViewController, UIImagePickerControllerDelegate, UINav
         var distance = self.pharmacists[indexPath.row].childSnapshotForPath("distance").value as NSNumber
         var detail = String(format: "%@, %@km", address, distance)
         cell.detailTextLabel!.text = detail
+        cell.detailTextLabel!.textColor = UIColor.whiteColor()
+        cell.textLabel!.textColor = UIColor.whiteColor()
         cell.backgroundColor = UIColor.clearColor()
-        println(self.pharmacists[indexPath.row].name)
+        cell.backgroundView?.backgroundColor = UIColor.blackColor()
         return cell
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showPrescription"
+        {
+            let prescriptionControl:PrescriptionController = segue.destinationViewController as PrescriptionController
+            prescriptionControl.prescriptionImage = myImage
+        }
     }
 }
